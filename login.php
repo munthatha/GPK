@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Prepare SQL statement to prevent SQL injection
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username AND password = MD5(:password)");
+    $stmt = $pdo->prepare("SELECT * FROM users1 WHERE username = :username AND password = MD5(:password)");
     $stmt->execute(['username' => $username, 'password' => $password]);
 
     // Fetch the user
