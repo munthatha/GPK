@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Check user type and redirect accordingly
         switch ($user["usertype"]) {
             case "admin":
-                header('Location: welcome.php');
+                header('Location: welcome.html');
                 break;
             case "stock":
                 header('Location: stock_dashboard.php');
